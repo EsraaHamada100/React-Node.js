@@ -2,7 +2,7 @@ import ProductCard from "./components/ProductCard";
 import './style/ProductsList.css';
 import { data } from '../../core/data/movies.js';
 import EmptyProduct from "./components/EmptyProduct";
-const ProductsList = () => {
+const ProductsListPage = () => {
     const moviesData = data;
     const watchNow = (id) => {
         console.log('we clicked in video id =', id);
@@ -34,4 +34,4 @@ const ProductsList = () => {
     return <div className="products-list">{displayMovies()}</div>;
 }
 
-export default ProductsList;
+export default ProductsListPage;
