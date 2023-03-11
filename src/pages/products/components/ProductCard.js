@@ -1,5 +1,5 @@
 import '../style/ProductCard.css';
-
+import {Link} from 'react-router-dom'
 const ProductCard = (props) => {
     return ( 
         <div className="product-card">
@@ -12,10 +12,8 @@ const ProductCard = (props) => {
             <div className="card-info">
                 <h4 className="title">{props.name}</h4>
                 <p className="info">{props.description}</p>
-                <button onClick={()=>{
-                    props.watch(props.id);
-                }}>
-                    Watch Now
+                <button >
+                    <Link to={'/product-info/'+ props.id}>Watch Now</Link>
                 </button>
             </div>
         </div>

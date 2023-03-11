@@ -1,14 +1,16 @@
 import Header from './shared/Header';
 import Footer from './shared/Footer';
-import ProductsList from './pages/products/ProductsList';
 import './style/App.css';
+import { Outlet } from 'react-router-dom';
 
 
 function App() {
   return (
     <>
       <Header />
-      <ProductsList />
+      {/* This means I will send you the rest but make the header and footer appear in all
+      pages */}
+      <Outlet />
       <Footer />
     </>
   );
